@@ -61,7 +61,8 @@ dotnet build
 //check git status
 git status
 git init // to create a git repository
-git add .
+git add . // to add untracked file
+git commit -m "Initial Commit"
 //in gitignore we can add like
 obj
 bin
