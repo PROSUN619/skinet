@@ -61,10 +61,30 @@ dotnet build
 //check git status
 git status
 git init // to create a git repository
-git add . // to add untracked file
+git add . // to add all untracked file
 git commit -m "Initial Commit"
+git remote add origin git@github.com:PROSUN619/skinet.git
+git push origin master
 //in gitignore we can add like
 obj
 bin
 appsettings.json
 *.db
+// drop database
+// go to root folder 
+cd..
+dotnet ef database drop -p Infrastructure -s API
+//remove early migration
+dotnet ef Migrations remove -p Infrastructure -s API
+// add migration with specification of project name and output directory
+//go to root folder
+dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations
+------------------------ name -------------project----------startup----folder
+//customize migration class
+1. Add ProductConfiguration
+2. override OnModelCreating in store context
+
+//lazy loading
+//entiry framework automatically load the relationship/entity
+//eager loading
+explicitly telling that we want navigation property along with entity
