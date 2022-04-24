@@ -1,0 +1,64 @@
+npm install -g @angular/cli
+or
+npm install -g @angular/cli@12
+
+//create angular app
+ng new myapp
+or 
+ng new client --strict false
+
+//version check
+ng v
+
+//create component
+ng g c employee // ng generate component employee
+
+declaretion section --> declare component directive and pipe in 
+import module --> module import
+
+//create module
+ng g module company // ng generate module company
+
+
+//create component inside folder 
+ng g c  company/employeelogin
+
+component can not be declared in declaretion section in multiple place
+
+//run angular app 
+ng serve
+
+https://github.com/TryCatchLearn/Skinet
+
+//configuring ssl
+//create a server key and certificate as per attachment
+"options": {
+            "sslKey": "ssl/server.key",
+            "sslCert": "ssl/server.crt",
+            "ssl": true
+          },
+
+//install bootstrap in angular
+ng add ngx-bootstrap
+or
+npm install ngx-bootstrap --save
+
+//install font awasome
+
+npm i font-awesome
+
+//add it into style section
+
+"styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node_modules/font-awesome/css/font-awesome.min.css",
+              "src/styles.scss"
+            ],
+
+
+//switch node version using nvm
+//to see all version
+nvm ls
+//then switch
+nvm use 12.20.1
